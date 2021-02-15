@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ant-media-server
+spec:
+  selector:
+    matchLabels:
+      app: ant-media
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ant-media
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm: 
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - ant-media
+              topologyKey: "kubernetes.io/hostname"
+
+      hostNetwork: true
+      containers:
+      - name: ant-media-server
+        imagePullPolicy: Always 
+        image: muratugureminoglu/ant:test
+        args: ["-g", "true", "-s", "true", "-r", "true", "-m", "cluster", "-h", "127.0.0.1"]
