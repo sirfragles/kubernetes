@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+spec:
+  selector:
+    matchLabels:
+      run: mongodb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: mongodb
+    spec:
+      hostNetwork: true
+      containers:
+      - name: mongodb
+        imagePullPolicy: Always  
+        image: muratugureminoglu/mongodb:4.2  
+        ports:
+        - containerPort: 27017
+          #      imagePullSecrets:
+          # - name: regcred
+
