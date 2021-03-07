@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ant-media-server
+spec:
+  selector:
+    app: ant-media
+  ports:
+    - name: http
+      protocol: TCP
+      port: 5080 
