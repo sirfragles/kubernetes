@@ -31,5 +31,5 @@ spec:
         resources:
           requests:
              cpu: 1000m
-        imagePullSecrets:
-        - name: regcred
+      imagePullSecrets:
+      - name: regcred
