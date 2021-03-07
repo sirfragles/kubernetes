@@ -11,7 +11,7 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
 spec:
   rules:
-  - host: 9kim2f.nodes.c1.waw1.k8s.ovh.net
+  - host: cloud.esesja.live
     http:
       paths:
       - path: /
@@ -25,4 +25,4 @@ spec:
   tls:
   - secretName: antmedia-cert
     hosts:
-      - 9kim2f.nodes.c1.waw1.k8s.ovh.net
+      - cloud.esesja.live
