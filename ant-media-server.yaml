@@ -26,7 +26,9 @@ spec:
       containers:
       - name: ant-media-server
         imagePullPolicy: Always
-        image: muratugureminoglu/ant:test
+        image: 8jc42hbk.gra7.container-registry.ovh.net/library/ant-media-server-enterprise-k8s:test
+      imagePullSecrets:
+      - name: regcred
         args: ["-g", "true", "-s", "true", "-r", "true", "-m", "cluster", "-h", "127.0.0.1"]
         resources:
           requests:
