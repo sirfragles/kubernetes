@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: default-http-backend
+  name: ant-media-server
 spec:
   selector:
     app: ant-media
