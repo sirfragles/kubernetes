@@ -26,8 +26,8 @@ spec:
       containers:
       - name: ant-media-server
         imagePullPolicy: Always
-        image: 8jc42hbk.gra7.container-registry.ovh.net/library/ant-media-server-enterprise-k8s:test
-        args: ["-g", "true", "-s", "true", "-r", "true", "-m", "cluster", "-h", "10.2.1.2"]
+        image: sirfragles/ams:2.3.0
+        args: ["-g", "true", "-s", "true", "-r", "true", "-m", "cluster", "-h", "10.2.2.4"]
         resources:
           requests:
              cpu: 1000m
