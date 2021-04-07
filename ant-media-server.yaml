@@ -27,9 +27,7 @@ spec:
       - name: ant-media-server
         imagePullPolicy: Always
         image: sirfragles/ams:2.3.0
-        args: ["-g", "true", "-s", "true", "-r", "true", "-m", "cluster", "-h", "10.2.1.2"]
+        args: ["-g", "true", "-s", "true", "-r", "true", "-m", "cluster", "-h", "127.0.0.1"]
         resources:
           requests:
              cpu: 1000m
-      imagePullSecrets:
-      - name: regcred
