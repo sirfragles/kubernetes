@@ -21,7 +21,7 @@ spec:
             port:
               number: 5080
 
-  tls:
-  - secretName: antmedia-cert
-    hosts:
-      - cloud.esesja.live
+#  tls:
+#  - secretName: antmedia-cert
+#    hosts:
+#      - cloud.esesja.live
